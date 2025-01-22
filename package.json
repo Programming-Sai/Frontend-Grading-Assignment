@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b fertilizer-system-preview -m \"${npm_config_message:-Updates}\""
+    "deploy": "gh-pages -d dist -b preview -m \"${npm_config_message:-Updates}\""
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
