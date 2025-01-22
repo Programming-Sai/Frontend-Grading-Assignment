@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Login-Page.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { createBrowserHistory } from "history";
+import { useNavigate } from "react-router-dom"; // Use useNavigate hook for navigation
 import { BASE_PATH } from "../../../BasePath";
 
 const Login = () => {
-  const history = createBrowserHistory();
-  const allowLogin = () => {
-    let isOkToLogin = true; // for the verification process
+  const [studentId, setStudentId] = useState(""); // Use state for handling input values
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  // Dummy login function (replace with actual validation logic)
+  const allowLogin = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    let isOkToLogin = true; // Simulate a successful login. Replace with real validation.
+
     if (isOkToLogin) {
-      history.push(`${BASE_PATH}/`);
+      // Store authentication token in localStorage
+      localStorage.setItem("authToken", "some-auth-token");
+
+      // Redirect to the dashboard or the main page after successful login
+      navigate(`${BASE_PATH}/dashboard`);
     } else {
-      alert("ERROR");
+      alert("Invalid credentials. Please try again.");
     }
   };
+
   return (
     <>
       <div className="all">
@@ -25,12 +37,24 @@ const Login = () => {
               <form>
                 <h2> Login</h2>
                 <div className="input-box">
-                  <input type="text" required placeholder="StudentID" />
+                  <input
+                    type="text"
+                    value={studentId}
+                    onChange={(e) => setStudentId(e.target.value)} // Handle input change
+                    required
+                    placeholder="StudentID"
+                  />
                   <FontAwesomeIcon icon={faUser} className="login-icon" />
                 </div>
 
                 <div className="input-box">
-                  <input type="password" required placeholder="Password" />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)} // Handle password change
+                    required
+                    placeholder="Password"
+                  />
                   <FontAwesomeIcon icon={faLock} className="login-icon" />
                 </div>
                 <button onClick={allowLogin}>Login</button>
