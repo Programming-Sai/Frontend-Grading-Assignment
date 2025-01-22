@@ -51,20 +51,36 @@ To run the project locally, follow these steps:
    - Overview of the system.
    - Navigation links to other pages.
 
+## ![Landing Page](./public/home.png)
+
+---
+
 2. **Login Page:**
 
    - Secure login form for students (Student ID and PIN).
    - Authentication simulation (no real backend, just a mock-up).
+
+## ![Landing Page](./public/login.png)
+
+---
 
 3. **Dashboard Page:**
 
    - Overview of the student’s current grades.
    - Alerts or notifications for any missing grades.
 
+## ![Landing Page](./public/dashboard.png)
+
+---
+
 4. **Grade Report Page:**
 
    - Detailed view of all courses and respective grades.
    - Option to filter by semester/academic year.
+
+## ![Landing Page](./public/filter.png)
+
+---
 
 5. **Missing Grade Form Page:**
 
@@ -72,14 +88,26 @@ To run the project locally, follow these steps:
    - Fields: Course name, Instructor name, Expected grade, Explanation field.
    - Submit button to report (no real submission, just a confirmation message).
 
+## ![Landing Page](./public/report.png)
+
+---
+
 6. **Instructor Contact Page:**
 
    - List of instructors with contact details.
    - Option to send a simulated email to the instructor (no real email, just a mock-up).
 
+## ![Landing Page](./public/instructor-list.png)
+
+---
+
 7. **Help and Support Page:**
    - FAQ section regarding grade reporting.
    - Contact form for technical support (mock-up).
+
+## ![Landing Page](./public/help.png)
+
+---
 
 ## Navigation
 
